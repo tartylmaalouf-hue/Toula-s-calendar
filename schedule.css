@@ -1,0 +1,263 @@
+@font-face {
+  font-family: 'Digital-7';
+  src: url('fonts/digital-7.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Digital-Dismay';
+  src: url('fonts/Digital-Dismay.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'DigiTech7';
+  src: url('fonts/DigiTech7.ttf') format('truetype');
+}
+
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    user-select: none;
+    -webkit-app-region: drag;
+}
+
+
+#schedule_app{  padding: 16px;
+  /* outer-frame-bg */
+  margin : 0px;
+
+  box-sizing: border-box;
+
+  position: relative;
+  width: 642px;
+  height: 642px;
+
+  background: linear-gradient(90deg, #7d749e 0%, #4f4864 100%);
+  border: 2px solid #C079FF;
+  border-radius: 20px;
+
+  opacity: 0.8;}
+
+#daysbox{
+  box-sizing: border-box;
+  position: relative;
+
+  /* Mise en page automatique */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  padding: 0px 4px 10px 4px;
+  margin: auto;
+  gap: 10px;
+
+  width: 95%;
+  height: 100px;
+
+  background: rgba(210, 164, 255, 0.4);
+  border: 1px solid #C079FF;
+  border-radius: 20px;
+}
+
+#title {
+    
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0px;
+  width: 100%;
+
+  font-family: 'Pixelify Sans';
+  font-style: normal;
+  font-size: 30px;
+
+  color: #FFFFFF;
+
+}
+
+
+.day{
+  /* Mise en page automatique */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  gap: 10px;
+
+  font-family: 'Pixeboy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: #8740a3;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  background: #FFFFFF;
+  border: 1px solid #C079FF;
+  border-radius: 20px;}
+
+.hour{
+    position: absolute;
+    top: -3px;
+    right: 10px;
+    margin: 0px;
+    font-family: 'Digital-7';
+    font-size: 60px;
+    line-height: 1;
+}
+
+
+#hour1{
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+.clignotant {
+    animation: blink 1s infinite;
+  }
+
+.date{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0px;
+    font-family: 'Pixeboy';
+    font-size: 15px;
+    line-height: 1;
+    color: #FFFFFF;
+  }
+  
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#hour2{
+    color: #FFFFFF;
+  }
+
+#edtbox{
+  box-sizing: border-box;
+  position: relative;
+  top: 10px;
+
+  /* Mise en page automatique */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  padding: 0px 4px 10px 4px;
+  margin: auto;
+  gap: 10px;
+
+  width: 95%;
+  height: 400px;
+
+  background: rgba(210, 164, 255, 0.4);
+  border: 1px solid #C079FF;
+  border-radius: 20px;
+}
+
+#edt{
+  box-sizing: border-box;
+
+  /* Mise en page automatique */
+
+  justify-content: start;
+  align-items: end;
+  margin: auto ;
+
+  width: 95%;
+  height: 95%;
+
+  background: #FFFFFF;
+  border: 1px solid #C079FF;
+  border-radius: 5px;
+
+  -webkit-app-region: no-drag; 
+  overflow-y: auto;
+
+}
+
+#edt::-webkit-scrollbar {
+  width: 8px;
+}
+
+#edt::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#edt::-webkit-scrollbar-thumb {
+  background: #C079FF;
+  border-radius: 10px;
+}
+
+
+#heures{
+  box-sizing: border-box;
+  position: relative;
+
+  /* Mise en page automatique */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 10px;
+  padding: 4px 10px;
+  gap: 0px;
+}
+
+.heure{
+  font-family:"Pixeboy";
+  font-size: 20px;
+  color: #7d749e;
+  position: relative;
+  height: 60px;
+  box-sizing: border-box;
+  width: 85%;
+  border-top: 1px solid #C079FF;
+  left: 10%;
+}
+
+#barreh{
+  position: absolute;
+  height: 60px;
+  box-sizing: border-box;
+  width: 85%;
+  border-top: 1px solid #ff73f3;
+  left: 10%;
+}
+
+.label_heure{
+  position: absolute;
+  transform: translateY(-50%) translateX(-50px);
+}
+
+.evenement{
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  box-sizing: border-box;
+  width: 85%;
+  border: 1px solid #C079FF;
+  left: 10%;
+  background-color: rgba(210, 164, 255, 0.8);
+
+  font-size: 20px;
+  color: #b43cfa;
+  font-family: "Pixeboy";
+
+}
+
+.day
+ {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
